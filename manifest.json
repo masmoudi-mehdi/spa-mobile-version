@@ -1,0 +1,21 @@
+{
+  "name": "spa-mobile | Votre Oasis de Bien-être Mobile",
+  "short_name": "spa-mobile",
+  "description": "spa-mobile vous offre une expérience de spa luxueuse et thérapeutique où que vous soyez.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f5f0",
+  "theme_color": "#5a9a94",
+  "icons": [
+    {
+      "src": "images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

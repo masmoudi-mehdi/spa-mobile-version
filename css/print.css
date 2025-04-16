@@ -1,0 +1,105 @@
+/* 
+ * spa-mobile - Print Stylesheet
+ * Optimizes the website for printing
+ */
+
+@media print {
+    /* Hide elements not needed for print */
+    header, 
+    footer, 
+    .mobile-toggle,
+    .btn,
+    .social-links,
+    .newsletter-form,
+    .contact-form {
+        display: none !important;
+    }
+    
+    /* Reset all colors to black and white */
+    body, p, h1, h2, h3, h4, h5, h6 {
+        color: #000 !important;
+        background: #fff !important;
+        font-size: 12pt;
+    }
+    
+    /* Remove shadows and effects */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    /* Ensure all sections are visible */
+    section {
+        padding: 20px 0 !important;
+        page-break-inside: avoid;
+    }
+    
+    /* Optimize images */
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    /* Add URLs after links */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+    }
+    
+    /* Don't show URLs for internal links */
+    a[href^="#"]:after {
+        content: "";
+    }
+    
+    /* Ensure proper page breaks */
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+    
+    /* Adjust layout for print */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* Make sure content is visible */
+    .hero-content {
+        background: none !important;
+        color: #000 !important;
+        padding: 0 !important;
+    }
+    
+    /* Adjust gallery for print */
+    .gallery-container {
+        display: block !important;
+    }
+    
+    .gallery-item {
+        width: 48% !important;
+        display: inline-block !important;
+        margin: 1% !important;
+    }
+    
+    /* Adjust testimonials for print */
+    .testimonials-container {
+        display: block !important;
+    }
+    
+    .testimonial-card {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    /* Add a note about the website */
+    body:after {
+        content: "Imprimé depuis spa-mobile.com. Pour plus d'informations, visitez notre site web.";
+        display: block;
+        text-align: center;
+        font-size: 10pt;
+        margin-top: 30px;
+    }
+}

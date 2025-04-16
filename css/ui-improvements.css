@@ -1,0 +1,406 @@
+/*
+ * spa-mobile - UI Improvements
+ * Améliorations UI/UX pour une meilleure expérience utilisateur
+ */
+
+/* ===== ACCESSIBILITÉ ===== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ===== BOUTON RETOUR EN HAUT ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--zen-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--zen-secondary);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== NAVIGATION AMÉLIORÉE ===== */
+.nav-link {
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--zen-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
+}
+
+.cta-nav {
+  padding: 8px 15px;
+  background-color: var(--zen-primary);
+  color: white !important;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.cta-nav:hover,
+.cta-nav:focus {
+  background-color: var(--zen-secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-nav::after {
+  display: none;
+}
+
+/* ===== MICRO-INTERACTIONS ===== */
+/* Effet de pulsation */
+.pulse-effect {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(90, 154, 148, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(90, 154, 148, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(90, 154, 148, 0);
+  }
+}
+
+/* Effet de brillance */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  transform: skewX(-25deg);
+  transition: all 0.75s;
+}
+
+.shine-effect:hover::before {
+  animation: shine 1.5s;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+/* Effet d'ondulation */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.ripple-effect:hover::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+/* Effet de lueur */
+.glow-effect {
+  transition: all 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 15px var(--zen-primary);
+}
+
+/* Effet de rebond doux */
+.bounce-soft {
+  animation: bounce-soft 2s infinite;
+}
+
+@keyframes bounce-soft {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* ===== FORMULAIRES AMÉLIORÉS ===== */
+.form-control {
+  transition: all 0.3s ease;
+  border: 1px solid #e0e5e5;
+  border-radius: 8px;
+  padding: 12px 15px;
+}
+
+.form-control:focus {
+  border-color: var(--zen-primary);
+  box-shadow: 0 0 0 3px rgba(90, 154, 148, 0.1);
+  outline: none;
+}
+
+.btn-submit,
+.btn-newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--zen-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn-submit:hover,
+.btn-newsletter:hover {
+  background-color: var(--zen-secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit i,
+.btn-newsletter i {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-submit:hover i,
+.btn-newsletter:hover i {
+  transform: translateX(5px);
+}
+
+/* ===== OPTIMISATIONS MOBILES ===== */
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .cta-nav {
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .btn-submit,
+  .btn-newsletter {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .back-to-top {
+    width: 35px;
+    height: 35px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  /* Désactiver certaines animations sur mobile pour améliorer les performances */
+  .pulse-effect,
+  .shine-effect::before,
+  .ripple-effect::after {
+    animation: none;
+  }
+
+  .glow-effect:hover {
+    box-shadow: none;
+  }
+}
+
+/* ===== AMÉLIORATION DE LA LISIBILITÉ DU FOOTER ===== */
+/* Fond plus foncé pour un meilleur contraste */
+footer {
+  background-color: #2a3a3d; /* Fond plus foncé que celui défini dans zen-theme.css */
+}
+.footer-tagline {
+  color: #ffffff; /* Blanc pur pour un meilleur contraste */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Légère ombre pour améliorer la lisibilité */
+  letter-spacing: 0.3px; /* Espacement des lettres pour une meilleure lisibilité */
+  max-width: 95%;
+  background-color: rgba(0, 0, 0, 0.2); /* Fond légèrement plus foncé */
+  padding: 10px 15px;
+  border-radius: 8px;
+  border-left: 3px solid var(--zen-primary);
+}
+
+/* Améliorer la lisibilité générale du footer */
+footer p {
+  color: #e0e0e0; /* Gris très clair pour un meilleur contraste */
+  line-height: 1.6;
+}
+
+footer .footer-col h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer .footer-col h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--zen-primary);
+}
+
+footer .footer-col ul li a {
+  color: #e0e0e0;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 3px 0;
+}
+
+footer .footer-col ul li a:hover {
+  color: var(--zen-primary);
+  transform: translateX(5px);
+}
+
+/* Ajuster le style du footer pour les petits écrans */
+@media (max-width: 768px) {
+  .footer-tagline {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  footer .footer-col h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-tagline {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 8px 10px;
+  }
+}
+
+/* ===== OPTIMISATIONS DE PERFORMANCE ===== */
+/* Utiliser will-change pour les animations importantes */
+.hero-image img,
+.benefit-card:hover,
+.gallery-item img {
+  will-change: transform;
+}
+
+/* Optimiser les transitions */
+.btn,
+.nav-link,
+.form-control {
+  will-change: transform, opacity;
+}
+
+/* ===== ÉTATS DE FOCUS AMÉLIORÉS ===== */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--zen-primary);
+  outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--zen-primary);
+  outline-offset: 2px;
+}

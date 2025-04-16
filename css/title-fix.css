@@ -1,0 +1,52 @@
+/*
+ * Correctifs pour les titres de section
+ */
+
+/* Correction du positionnement des titres de section */
+.section-title.zen-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Assurer que les titres sont bien centrés */
+#concept .section-title.zen-title,
+#bienfaits .section-title.zen-title {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Améliorer l'apparence des titres */
+.section-title.zen-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(135deg, var(--zen-primary), var(--zen-secondary));
+}
+
+/* Assurer que les conteneurs de section ont un bon alignement */
+.concept-section .container,
+.section-dark .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Assurer que le contenu est bien aligné après les titres */
+.concept-content,
+.benefits-container {
+  width: 100%;
+}

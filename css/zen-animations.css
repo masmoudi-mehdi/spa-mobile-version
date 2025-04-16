@@ -1,0 +1,249 @@
+/*
+ * spa-mobile - Animations Zen
+ * Animations douces et apaisantes pour renforcer l'ambiance zen
+ */
+
+/* Effet de vague d'eau */
+.zen-wave {
+    position: relative;
+    overflow: hidden;
+}
+
+.zen-wave::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: 0;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.03) 40%, rgba(255, 255, 255, 0) 70%);
+    transform-origin: center center;
+    animation: zen-wave 15s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes zen-wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation de respiration */
+.zen-breathe {
+    animation: zen-breathe-effect 8s infinite ease-in-out;
+}
+
+@keyframes zen-breathe-effect {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+/* Animation de fondu doux */
+.zen-fade-in {
+    opacity: 0;
+    animation: zen-fade 2s forwards cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes zen-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation de flottement zen */
+.zen-float-slow {
+    animation: zen-float 6s infinite alternate ease-in-out;
+}
+
+.zen-float-medium {
+    animation: zen-float 4s infinite alternate ease-in-out;
+}
+
+.zen-float-fast {
+    animation: zen-float 3s infinite alternate ease-in-out;
+}
+
+@keyframes zen-float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+/* Effet de brume */
+.zen-mist {
+    position: relative;
+}
+
+.zen-mist::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent 30%, transparent 70%, rgba(255, 255, 255, 0.05));
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.zen-mist:hover::after {
+    opacity: 1;
+}
+
+/* Effet de transition douce entre sections */
+.zen-transition {
+    position: relative;
+}
+
+.zen-transition::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Animation d'entrée plus douce pour les sections */
+.zen-section-enter {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.zen-section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Effet de lumière zen */
+.zen-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.zen-glow::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+}
+
+.zen-glow:hover::before {
+    opacity: 1;
+}
+
+/* Effet de transition entre les pages */
+.zen-page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
+.zen-page-transition.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.zen-page-transition-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.zen-page-transition-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid rgba(90, 154, 148, 0.2);
+    border-top-color: rgba(90, 154, 148, 0.8);
+    animation: zen-spin 1.5s infinite linear;
+    margin: 0 auto 20px;
+}
+
+@keyframes zen-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Effet de déplacement parallaxe doux */
+.zen-parallax {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Effet d'ombre zen */
+.zen-shadow {
+    box-shadow: 0 15px 35px rgba(90, 154, 148, 0.1);
+    transition: box-shadow 0.5s ease;
+}
+
+.zen-shadow:hover {
+    box-shadow: 0 20px 40px rgba(90, 154, 148, 0.15);
+}
+
+/* Effet de focus zen */
+.zen-focus {
+    filter: saturate(0.95) brightness(0.98);
+    transition: filter 0.8s ease;
+}
+
+.zen-focus:hover {
+    filter: saturate(1) brightness(1.02);
+}
+
+/* Effet de calligraphie zen pour les titres */
+.zen-title {
+    position: relative;
+    display: inline-block;
+}
+
+.zen-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(90, 154, 148, 0.5), transparent);
+    transform: scaleX(0.7);
+    transform-origin: center;
+    transition: transform 0.8s ease;
+}
+
+.zen-title:hover::after {
+    transform: scaleX(1);
+}
