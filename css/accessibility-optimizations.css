@@ -1,0 +1,172 @@
+/*
+ * spa-mobile - Accessibility Optimizations
+ * Optimisations d'accessibilité pour les appareils mobiles
+ */
+
+/* Améliorer le contraste des textes */
+.hero p,
+.concept-lead,
+.benefit-card p,
+.testimonial-card p,
+.contact-info p,
+.footer-col p {
+    color: rgba(255, 255, 255, 0.95) !important; /* Augmenter le contraste sur les fonds sombres */
+}
+
+.section-dark p,
+.section-light p,
+.section-accent p {
+    color: rgba(51, 51, 51, 0.95) !important; /* Augmenter le contraste sur les fonds clairs */
+}
+
+/* Améliorer la lisibilité des textes */
+@media (max-width: 768px) {
+    body {
+        line-height: 1.7 !important; /* Augmenter l'interligne pour une meilleure lisibilité */
+    }
+    
+    p, li {
+        font-size: 1rem !important; /* Taille de texte minimale pour la lisibilité */
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.4 !important; /* Améliorer l'interligne des titres */
+    }
+}
+
+/* Améliorer la navigation au clavier */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[tabindex]:focus {
+    outline: 3px solid #0078a8 !important; /* Contour visible pour la navigation au clavier */
+    outline-offset: 3px !important;
+}
+
+/* Améliorer les contrastes pour les utilisateurs malvoyants */
+@media (prefers-contrast: more) {
+    body {
+        color: #000 !important;
+    }
+    
+    .hero-content,
+    .benefit-card,
+    .testimonial-card,
+    .oxygen-benefit,
+    .concept-feature,
+    .equipment-feature,
+    .about-value-card {
+        border: 1px solid #000 !important;
+    }
+    
+    .btn, .btn-oxygen {
+        border: 2px solid #000 !important;
+    }
+    
+    .hero h1, .hero p,
+    .section-title,
+    h2, h3, h4 {
+        text-shadow: none !important;
+    }
+}
+
+/* Améliorer la lisibilité pour les utilisateurs dyslexiques */
+@media (max-width: 768px) {
+    body.mobile-device {
+        letter-spacing: 0.05em !important;
+        word-spacing: 0.1em !important;
+    }
+    
+    p, li {
+        max-width: 70ch !important; /* Limiter la largeur des lignes pour une meilleure lisibilité */
+    }
+}
+
+/* Améliorer l'accessibilité des formulaires */
+.form-control {
+    border: 2px solid #ddd !important;
+}
+
+.form-control:focus {
+    border-color: #0078a8 !important;
+    box-shadow: 0 0 0 3px rgba(0, 120, 168, 0.3) !important;
+}
+
+/* Ajouter des étiquettes visibles pour les champs de formulaire */
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Améliorer l'accessibilité des boutons */
+.btn, .btn-oxygen {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Améliorer l'accessibilité des liens */
+a {
+    text-decoration: underline !important; /* Rendre les liens plus visibles */
+}
+
+nav a,
+.btn,
+.btn-oxygen,
+.logo,
+.social-links a {
+    text-decoration: none !important; /* Exceptions pour certains liens */
+}
+
+/* Améliorer l'accessibilité des images */
+img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Améliorer l'accessibilité du menu mobile */
+.mobile-toggle {
+    min-width: 44px !important;
+    min-height: 44px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Améliorer l'accessibilité des sections */
+section {
+    margin-bottom: 30px !important; /* Ajouter de l'espace entre les sections */
+}
+
+/* Améliorer l'accessibilité des listes */
+ul, ol {
+    padding-left: 20px !important;
+}
+
+/* Améliorer l'accessibilité des tableaux */
+table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+}
+
+th, td {
+    padding: 12px !important;
+    text-align: left !important;
+    border: 1px solid #ddd !important;
+}
+
+/* Améliorer l'accessibilité des vidéos */
+video, iframe {
+    max-width: 100% !important;
+    height: auto !important;
+}

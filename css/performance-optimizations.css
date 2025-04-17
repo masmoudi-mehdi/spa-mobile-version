@@ -1,0 +1,147 @@
+/*
+ * spa-mobile - Performance Optimizations
+ * Optimisations de performance pour les appareils mobiles
+ */
+
+/* Optimisations pour les appareils à faible puissance */
+@media (prefers-reduced-motion: reduce) {
+    /* Désactiver toutes les animations pour les utilisateurs qui préfèrent réduire les animations */
+    *, *::before, *::after {
+        animation-duration: 0.001s !important;
+        animation-delay: 0s !important;
+        transition-duration: 0.001s !important;
+        scroll-behavior: auto !important;
+    }
+    
+    /* Désactiver les effets parallax et les animations complexes */
+    .hero:hover .hero-image img,
+    .benefit-card:hover,
+    .testimonial-card:hover,
+    .gallery-item:hover img,
+    .concept-feature:hover,
+    .equipment-feature:hover,
+    .about-value-card:hover,
+    .hero-scroll-indicator i {
+        transform: none !important;
+        animation: none !important;
+    }
+}
+
+/* Optimisations pour les connexions lentes */
+@media (prefers-reduced-data: reduce) {
+    /* Réduire la qualité des images de fond */
+    .hero-image img,
+    .benefit-image img,
+    .concept-image img,
+    .about-image img,
+    .equipment-image img,
+    .gallery-item img,
+    .testimonial-image img {
+        filter: blur(0) !important; /* Désactiver les filtres qui consomment des ressources */
+    }
+}
+
+/* Optimisations pour les appareils mobiles */
+.mobile-device {
+    /* Utiliser des propriétés CSS qui consomment moins de ressources */
+    .hero-content,
+    .benefit-card,
+    .testimonial-card,
+    .oxygen-benefit,
+    .concept-feature,
+    .equipment-feature,
+    .about-value-card {
+        will-change: auto; /* Éviter d'utiliser will-change sauf si nécessaire */
+        backface-visibility: visible; /* Désactiver backface-visibility sauf si nécessaire */
+    }
+    
+    /* Réduire la complexité des ombres */
+    .hero-content,
+    .benefit-card,
+    .testimonial-card,
+    .oxygen-benefit,
+    .btn,
+    .btn-oxygen {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important; /* Ombre simplifiée */
+    }
+    
+    /* Utiliser des dégradés plus simples */
+    .oxygen-therapy-section,
+    .section-accent,
+    .hero-overlay {
+        background: linear-gradient(to bottom, rgba(0, 120, 168, 0.8), rgba(0, 178, 169, 0.4)) !important;
+    }
+    
+    /* Réduire la complexité des animations */
+    .fade-in,
+    .fade-in-up,
+    .fade-in-down,
+    .fade-in-left,
+    .fade-in-right,
+    .zoom-in {
+        animation-duration: 0.5s !important;
+    }
+}
+
+/* Optimisations pour les écrans à haute densité de pixels */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Utiliser des bordures plus épaisses pour une meilleure visibilité */
+    .btn,
+    .btn-oxygen,
+    .form-control,
+    .benefit-card,
+    .testimonial-card,
+    .oxygen-benefit {
+        border-width: 1px !important;
+    }
+    
+    /* Augmenter légèrement la taille des textes pour une meilleure lisibilité */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Optimisations pour le mode sombre */
+@media (prefers-color-scheme: dark) {
+    /* Ces styles s'appliqueront automatiquement si l'utilisateur a activé le mode sombre sur son appareil */
+    .mobile-device {
+        /* Réduire la luminosité des images */
+        img {
+            filter: brightness(0.9) !important;
+        }
+        
+        /* Réduire le contraste des ombres */
+        .hero-content,
+        .benefit-card,
+        .testimonial-card,
+        .oxygen-benefit,
+        .btn,
+        .btn-oxygen {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+        }
+    }
+}
+
+/* Optimisations pour économiser la batterie */
+@media (prefers-reduced-power: reduce) {
+    /* Ces styles s'appliqueront si l'appareil est en mode économie d'énergie */
+    .mobile-device {
+        /* Désactiver toutes les animations */
+        *, *::before, *::after {
+            animation: none !important;
+            transition: none !important;
+        }
+        
+        /* Désactiver les effets visuels gourmands en ressources */
+        .hero-content,
+        .benefit-card,
+        .testimonial-card,
+        .oxygen-benefit,
+        .btn,
+        .btn-oxygen {
+            box-shadow: none !important;
+            backdrop-filter: none !important;
+        }
+    }
+}
