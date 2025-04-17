@@ -1,0 +1,87 @@
+/*
+ * spa-mobile - Mobile Fixes
+ * Corrections spécifiques pour les problèmes sur mobile
+ */
+
+/* ===== CORRECTION DU X DU MENU BURGER ===== */
+@media (max-width: 768px) {
+  /* Réduire la taille du X qui ferme le menu burger */
+  .mobile-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    width: 20px; /* Réduire la largeur */
+  }
+  
+  .mobile-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    width: 20px; /* Réduire la largeur */
+  }
+  
+  /* Ajuster la position du X pour qu'il soit centré */
+  .mobile-toggle[aria-expanded="true"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* ===== CORRECTION DU TEXTE BLEU SUR FOND BLEU ===== */
+@media (max-width: 768px) {
+  /* Améliorer le contraste dans la section oxygénothérapie */
+  .oxygen-therapy-section h3 {
+    color: #003a54 !important; /* Bleu très foncé pour un meilleur contraste */
+    font-weight: 700 !important; /* Police plus grasse pour améliorer la lisibilité */
+  }
+  
+  .oxygen-therapy-section p {
+    color: #111 !important; /* Texte presque noir pour un contraste maximal */
+  }
+  
+  /* Améliorer le contraste des cartes de bienfaits */
+  .oxygen-benefit h4 {
+    color: #003a54 !important; /* Bleu très foncé pour un meilleur contraste */
+    font-weight: 700 !important; /* Police plus grasse pour améliorer la lisibilité */
+  }
+  
+  .oxygen-benefit p {
+    color: #111 !important; /* Texte presque noir pour un contraste maximal */
+  }
+  
+  .oxygen-benefit-icon {
+    color: #003a54 !important; /* Bleu très foncé pour un meilleur contraste */
+  }
+  
+  /* Améliorer le contraste du badge */
+  .oxygen-badge {
+    background: #003a54 !important; /* Bleu très foncé pour un meilleur contraste */
+    color: #ffffff !important; /* Blanc pur pour un contraste maximal */
+    font-weight: 700 !important; /* Police plus grasse pour améliorer la lisibilité */
+  }
+  
+  /* Améliorer le contraste des titres de section */
+  .section-title {
+    color: #003a54 !important; /* Bleu très foncé pour un meilleur contraste */
+  }
+  
+  /* Améliorer le contraste des liens de navigation */
+  nav ul li a {
+    color: #003a54 !important; /* Bleu très foncé pour un meilleur contraste */
+    font-weight: 600 !important; /* Police plus grasse pour améliorer la lisibilité */
+  }
+}
+
+/* ===== OPTIMISATIONS POUR LES TRÈS PETITS ÉCRANS ===== */
+@media (max-width: 375px) {
+  /* Réduire encore plus la taille du X sur les très petits écrans */
+  .mobile-toggle[aria-expanded="true"] span:nth-child(1),
+  .mobile-toggle[aria-expanded="true"] span:nth-child(3) {
+    width: 18px; /* Réduire davantage la largeur */
+  }
+  
+  /* Améliorer encore plus le contraste sur les très petits écrans */
+  .oxygen-therapy-section h3,
+  .oxygen-benefit h4,
+  .section-title {
+    font-size: 1.3rem !important; /* Texte plus grand pour une meilleure lisibilité */
+  }
+}

@@ -1,0 +1,159 @@
+/*
+ * spa-mobile - Contrast Controls Styles (Fixed Version)
+ * Styles pour les contrôles d'ajustement du contraste
+ */
+
+/* Styles de base pour les contrôles de contraste */
+.contrast-controls {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Styles pour le bouton principal */
+.contrast-button {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #0078a8;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.contrast-button:hover {
+    background-color: #005a80;
+    transform: scale(1.05);
+}
+
+.contrast-button:focus {
+    outline: 3px solid #0078a8;
+    outline-offset: 3px;
+}
+
+/* Styles pour le menu des options */
+.contrast-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    width: 220px;
+    transition: all 0.3s ease;
+}
+
+/* Afficher le menu lorsqu'il est actif */
+.contrast-menu.active {
+    display: flex;
+}
+
+/* Styles pour les options du menu */
+.contrast-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contrast-option:hover {
+    background-color: #f0f0f0;
+}
+
+.contrast-option:focus {
+    outline: 2px solid #0078a8;
+    outline-offset: 2px;
+}
+
+/* Styles pour l'option sélectionnée */
+.contrast-option.selected {
+    background-color: #e6f7ff;
+    color: #0078a8;
+    font-weight: 600;
+}
+
+.contrast-option.selected i {
+    color: #0078a8;
+}
+
+/* Styles pour les icônes */
+.contrast-option i {
+    color: #666;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Styles pour les appareils mobiles */
+@media (max-width: 768px) {
+    .contrast-controls {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .contrast-menu {
+        width: 200px;
+    }
+    
+    .contrast-option {
+        padding: 12px 10px;
+    }
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 480px) {
+    .contrast-menu {
+        width: 180px;
+    }
+}
+
+/* Styles pour le mode sombre */
+@media (prefers-color-scheme: dark) {
+    .contrast-menu {
+        background-color: #333;
+        border: 1px solid #444;
+    }
+    
+    .contrast-option {
+        color: #fff;
+    }
+    
+    .contrast-option:hover {
+        background-color: #444;
+    }
+    
+    .contrast-option.selected {
+        background-color: #004d6d;
+        color: #fff;
+    }
+    
+    .contrast-option i {
+        color: #ccc;
+    }
+    
+    .contrast-option.selected i {
+        color: #fff;
+    }
+}
