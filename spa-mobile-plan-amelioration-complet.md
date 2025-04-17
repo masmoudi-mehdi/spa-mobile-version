@@ -45,9 +45,6 @@
 - [x] **DONE** - Optimiser le menu mobile
 - [x] **DONE** - Améliorer la gestion de l'orientation (portrait/paysage)
 - [x] **DONE** - Ajouter un bouton "Retour en haut" pour les longues pages
-- [ ] Ajouter une barre de navigation fixe en bas pour un accès rapide
-- [ ] Implémenter une recherche accessible depuis n'importe quelle page
-- [ ] Ajouter un indicateur de progression pour les longues pages
 
 ### Optimisations d'images pour mobile
 
