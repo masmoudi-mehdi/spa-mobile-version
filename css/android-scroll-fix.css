@@ -1,0 +1,117 @@
+/*
+ * spa-mobile - Android Scroll Fix
+ * Corrections pour les problèmes de défilement sur Android
+ */
+
+/* ===== CORRECTIONS POUR LE DÉFILEMENT SUR ANDROID ===== */
+
+/* Correction du défilement sur le body */
+html, body {
+  height: auto !important;
+  overflow-y: visible !important;
+  overflow-x: hidden !important;
+  position: relative !important;
+  overscroll-behavior-y: auto !important;
+  -webkit-overflow-scrolling: auto !important;
+}
+
+/* Annuler certaines propriétés qui peuvent bloquer le défilement sur Android */
+body.android-device {
+  overflow: visible !important;
+  position: static !important;
+  height: auto !important;
+  min-height: 100% !important;
+}
+
+/* Correction pour les sections qui pourraient bloquer le défilement */
+section {
+  overflow: visible !important;
+  position: relative !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* Correction pour les éléments fixed qui peuvent interférer avec le défilement */
+.fixed-element,
+header,
+.contrast-controls {
+  position: fixed !important;
+  z-index: 1000 !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+/* Correction pour les éléments avec position: sticky */
+.sticky-element {
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+/* Correction pour les éléments avec des événements tactiles qui peuvent bloquer le défilement */
+[data-haptic="true"],
+.swipe-indicator,
+.contrast-controls,
+.mobile-toggle,
+.btn,
+.btn-oxygen,
+.btn-primary,
+.btn-outline,
+a,
+button {
+  touch-action: auto !important;
+}
+
+/* Correction pour les conteneurs qui pourraient avoir overflow: hidden */
+.container, 
+.section-container,
+.footer-container,
+.footer-content {
+  overflow: visible !important;
+}
+
+/* Correction pour les éléments avec height: 100vh qui peuvent causer des problèmes sur Android */
+.full-height {
+  height: auto !important;
+  min-height: 100vh !important;
+  max-height: none !important;
+}
+
+/* Correction pour les éléments avec des gestionnaires d'événements tactiles */
+.touch-element {
+  touch-action: auto !important;
+}
+
+/* Correction pour les éléments avec des gestionnaires de défilement personnalisés */
+[data-scroll],
+[data-scroll-container],
+[data-scroll-section] {
+  overflow: visible !important;
+}
+
+/* Correction spécifique pour le footer sur Android */
+footer {
+  overflow: visible !important;
+  position: relative !important;
+}
+
+/* Correction pour les éléments avec will-change */
+.will-change-element {
+  will-change: auto !important;
+}
+
+/* Correction pour les éléments avec transform */
+.transform-element {
+  transform: none !important;
+}
+
+/* Correction pour les animations qui peuvent interférer avec le défilement */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

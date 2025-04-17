@@ -1,0 +1,291 @@
+/*
+ * spa-mobile - Footer Mobile Improvements
+ * Amélioration de la structure du footer pour les versions mobiles
+ */
+
+/* ===== AMÉLIORATIONS GÉNÉRALES DU FOOTER ===== */
+
+footer {
+  background: linear-gradient(135deg, #222832, #1a1f26);
+  color: #fff;
+  padding: 60px 0 30px;
+  position: relative;
+}
+
+/* Ajout d'un effet de vague en haut du footer */
+footer::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23222832'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' fill='%23222832'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%23222832'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+  background-size: cover;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: #0078a8;
+}
+
+.footer-col p {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.footer-col ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0078a8;
+  font-size: 1.2rem;
+}
+
+.footer-col ul li a {
+  color: #bbb;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #0078a8;
+  padding-left: 5px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #0078a8;
+  transform: translateY(-3px);
+}
+
+.newsletter-form {
+  position: relative;
+}
+
+.newsletter-form .form-group {
+  margin-bottom: 15px;
+}
+
+.newsletter-form .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+
+.newsletter-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter-form .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #0078a8;
+  box-shadow: 0 0 0 3px rgba(0, 120, 168, 0.2);
+}
+
+.newsletter-form .btn {
+  background-color: #0078a8;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.newsletter-form .btn:hover {
+  background-color: #006690;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #bbb;
+}
+
+/* ===== AMÉLIORATIONS POUR MOBILE ===== */
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 0 20px;
+  }
+  
+  footer::before {
+    top: -10px;
+    height: 10px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
+  }
+  
+  .footer-col:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  /* Transformer les titres en accordéon sur mobile */
+  .footer-col h3 {
+    cursor: pointer;
+    padding-right: 30px;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .footer-col h3::before {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-col h3.active::before {
+    content: '−';
+  }
+  
+  /* Masquer le contenu par défaut sur mobile */
+  .footer-col .footer-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .footer-col .footer-content.active {
+    max-height: 500px;
+  }
+  
+  /* Améliorer l'espacement des liens sur mobile */
+  .footer-col ul li {
+    margin-bottom: 12px;
+  }
+  
+  /* Centrer les icônes sociales sur mobile */
+  .social-links {
+    justify-content: center;
+  }
+  
+  /* Améliorer le formulaire de newsletter sur mobile */
+  .newsletter-form .form-control {
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  .newsletter-form .btn {
+    padding: 15px;
+    font-size: 1rem;
+  }
+  
+  /* Améliorer le copyright sur mobile */
+  .copyright {
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== OPTIMISATIONS POUR LES TRÈS PETITS ÉCRANS ===== */
+@media (max-width: 375px) {
+  footer {
+    padding: 30px 0 15px;
+  }
+  
+  .footer-col h3 {
+    font-size: 1.2rem;
+  }
+  
+  .footer-col p {
+    font-size: 0.9rem;
+  }
+  
+  .footer-col ul li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .social-links a {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  
+  .newsletter-form .form-control {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  
+  .newsletter-form .btn {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
