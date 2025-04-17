@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes, viewport-fit=cover"
     />
     <meta name="theme-color" content="#0078a8" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -12,6 +12,11 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="application-name" content="spa-mobile" />
+    <meta name="msapplication-TileColor" content="#0078a8" />
+    <meta name="msapplication-tap-highlight" content="no" />
     <title>spa-mobile | Votre Oasis de Bien-être Mobile</title>
 
     <!-- Meta tags for SEO -->
@@ -43,6 +48,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/additional-styles.css" />
+    <link rel="stylesheet" href="css/mobile-optimizations.css" />
+    <link rel="stylesheet" href="css/touch-optimizations.css" />
     <link rel="stylesheet" href="css/print.css" media="print" />
 
     <style>
@@ -212,6 +219,12 @@
       <div class="hero-image">
         <picture>
           <source
+            media="(max-width: 375px)"
+            srcset="
+              https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=65
+            "
+          />
+          <source
             media="(max-width: 576px)"
             srcset="
               https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-1.2.1&auto=format&fit=crop&w=576&q=70
@@ -229,10 +242,17 @@
               https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-1.2.1&auto=format&fit=crop&w=992&q=80
             "
           />
+          <source
+            media="(max-width: 1200px)"
+            srcset="
+              https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=85
+            "
+          />
           <img
             src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
             alt="Expérience spa-mobile"
             loading="eager"
+            sizes="(max-width: 375px) 375px, (max-width: 576px) 576px, (max-width: 768px) 768px, (max-width: 992px) 992px, (max-width: 1200px) 1200px, 1950px"
           />
         </picture>
       </div>
@@ -310,10 +330,32 @@
           </div>
 
           <div class="oxygen-therapy-image">
-            <img
-              src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-              alt="Oxygénothérapie spa-mobile"
-            />
+            <picture>
+              <source
+                media="(max-width: 375px)"
+                srcset="
+                  https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=65
+                "
+              />
+              <source
+                media="(max-width: 576px)"
+                srcset="
+                  https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=576&q=70
+                "
+              />
+              <source
+                media="(max-width: 768px)"
+                srcset="
+                  https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=768&q=75
+                "
+              />
+              <img
+                src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Oxygénothérapie spa-mobile"
+                loading="lazy"
+                sizes="(max-width: 375px) 375px, (max-width: 576px) 576px, (max-width: 768px) 768px, 800px"
+              />
+            </picture>
             <div class="oxygen-badge">Notre Spécialité</div>
           </div>
         </div>
@@ -1086,6 +1128,8 @@
     </footer>
 
     <!-- Custom JavaScript -->
+    <script src="js/responsive-handler.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/image-optimizations.js"></script>
   </body>
 </html>

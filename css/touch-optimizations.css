@@ -1,0 +1,148 @@
+/*
+ * spa-mobile - Touch Optimizations
+ * Optimisations pour les appareils à écran tactile
+ */
+
+/* Appliquer ces styles uniquement aux appareils tactiles */
+@media (hover: none) and (pointer: coarse) {
+    /* Augmenter la taille des zones cliquables */
+    nav ul li a,
+    .btn,
+    .btn-oxygen,
+    .hero-feature,
+    .footer-col ul li a,
+    .social-links a {
+        padding: 12px;
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Améliorer les interactions tactiles */
+    .mobile-toggle {
+        padding: 10px;
+    }
+    
+    .mobile-toggle span {
+        height: 4px;
+        margin: 6px 0;
+    }
+    
+    /* Désactiver les effets de survol qui peuvent causer des problèmes sur mobile */
+    .benefit-card:hover,
+    .testimonial-card:hover,
+    .gallery-item:hover,
+    .concept-feature:hover,
+    .equipment-feature:hover,
+    .about-value-card:hover {
+        transform: none !important;
+        box-shadow: 0 10px 20px rgba(0, 120, 168, 0.1) !important;
+    }
+    
+    /* Remplacer les effets de survol par des effets de toucher */
+    .benefit-card:active,
+    .testimonial-card:active,
+    .gallery-item:active,
+    .btn:active,
+    .btn-oxygen:active {
+        transform: scale(0.98) !important;
+        transition: transform 0.1s ease !important;
+    }
+    
+    /* Améliorer le défilement */
+    html, body {
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+    
+    /* Optimiser les formulaires pour les appareils tactiles */
+    input, textarea, select, button {
+        font-size: 16px !important; /* Empêche le zoom automatique sur iOS */
+        padding: 12px !important;
+    }
+    
+    /* Augmenter l'espacement pour les doigts */
+    .gallery-container {
+        gap: 15px !important;
+    }
+    
+    .oxygen-benefits,
+    .benefits-container,
+    .testimonials-container {
+        gap: 20px !important;
+    }
+    
+    /* Améliorer la lisibilité sur les écrans tactiles */
+    p, li {
+        line-height: 1.7 !important;
+    }
+    
+    /* Optimiser les images pour le toucher */
+    .gallery-item {
+        position: relative;
+    }
+    
+    .gallery-item::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+    
+    .gallery-item:active::after {
+        opacity: 1;
+    }
+}
+
+/* Optimisations spécifiques pour iOS */
+@supports (-webkit-touch-callout: none) {
+    /* Correction pour le 100vh sur iOS */
+    .hero {
+        height: 100vh; /* Fallback */
+        height: -webkit-fill-available;
+    }
+    
+    /* Correction pour le défilement élastique sur iOS */
+    html {
+        position: fixed;
+        height: 100%;
+        overflow: scroll;
+        width: 100%;
+    }
+    
+    /* Correction pour les boutons sur iOS */
+    .btn, .btn-oxygen {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+}
+
+/* Optimisations pour les appareils Android */
+@supports not (-webkit-touch-callout: none) {
+    @media (hover: none) and (pointer: coarse) {
+        /* Correction pour certains appareils Android */
+        input, textarea, select {
+            font-size: 16px !important;
+        }
+        
+        /* Améliorer le rendu des ombres sur Android */
+        .hero-content,
+        .benefit-card,
+        .testimonial-card,
+        .oxygen-benefit,
+        .btn,
+        .btn-oxygen {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+    }
+}
