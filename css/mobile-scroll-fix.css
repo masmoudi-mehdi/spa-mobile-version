@@ -1,0 +1,156 @@
+/*
+ * spa-mobile - Mobile Scroll Fix
+ * Corrections pour les problèmes de défilement sur iOS et Android
+ */
+
+/* ===== CORRECTIONS COMMUNES POUR LE DÉFILEMENT MOBILE ===== */
+
+/* Correction du défilement sur le body */
+html, body {
+  overflow-x: hidden !important;
+  position: relative !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* S'assurer que le contenu principal est défilable */
+main, .main-content {
+  position: relative !important;
+}
+
+/* Correction pour les sections qui pourraient bloquer le défilement */
+section {
+  position: relative !important;
+}
+
+/* Correction pour les éléments fixed qui peuvent interférer avec le défilement */
+.fixed-element {
+  position: fixed !important;
+  z-index: 1000 !important;
+}
+
+/* Correction pour les éléments avec position: sticky */
+.sticky-element {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
+
+/* Correction pour les éléments avec des événements tactiles */
+[data-haptic="true"],
+.swipe-indicator,
+.contrast-controls,
+.mobile-toggle,
+.btn,
+.btn-oxygen,
+.btn-primary,
+.btn-outline,
+a,
+button {
+  touch-action: manipulation !important;
+}
+
+/* Correction pour les conteneurs qui pourraient avoir overflow: hidden */
+.container, .section-container {
+  overflow: visible !important;
+}
+
+/* Correction pour les animations qui peuvent interférer avec le défilement */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== CORRECTIONS SPÉCIFIQUES POUR iOS ===== */
+.ios-device {
+  -webkit-overflow-scrolling: touch !important;
+  overflow-y: auto !important;
+  overscroll-behavior-y: none !important;
+}
+
+.ios-device section {
+  -webkit-overflow-scrolling: touch !important;
+  overflow: visible !important;
+}
+
+.ios-device .fixed-element,
+.ios-device header,
+.ios-device .contrast-controls,
+.ios-device .swipe-indicator {
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+  will-change: transform !important;
+}
+
+.ios-device .full-height,
+.ios-device .hero {
+  height: calc(var(--vh, 1vh) * 100) !important;
+}
+
+/* Correction spécifique pour iOS 15+ */
+@supports (-webkit-touch-callout: none) {
+  .ios-device {
+    /* Désactiver le comportement de défilement élastique sur iOS */
+    overscroll-behavior-y: none !important;
+  }
+  
+  /* Correction pour le viewport sur iOS */
+  .viewport-fix {
+    height: 100% !important;
+    position: relative !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+/* ===== CORRECTIONS SPÉCIFIQUES POUR ANDROID ===== */
+.android-device {
+  overflow: visible !important;
+  position: static !important;
+  height: auto !important;
+  min-height: 100% !important;
+}
+
+.android-device section {
+  overflow: visible !important;
+  height: auto !important;
+  position: relative !important;
+}
+
+.android-device .fixed-element,
+.android-device header,
+.android-device .contrast-controls {
+  will-change: auto !important;
+  transform: none !important;
+}
+
+.android-device [data-haptic="true"],
+.android-device .btn,
+.android-device a,
+.android-device button {
+  touch-action: auto !important;
+}
+
+.android-device .container, 
+.android-device .section-container,
+.android-device .footer-container,
+.android-device .footer-content {
+  overflow: visible !important;
+}
+
+.android-device footer {
+  overflow: visible !important;
+  position: relative !important;
+}
+
+.android-device .will-change-element {
+  will-change: auto !important;
+}
+
+.android-device .transform-element {
+  transform: none !important;
+}
