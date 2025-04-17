@@ -1,0 +1,252 @@
+/*
+ * spa-mobile - About Section Contrast
+ * Amélioration du contraste pour la section À propos
+ */
+
+/* ===== AMÉLIORATION DU CONTRASTE POUR LA SECTION À PROPOS ===== */
+
+/* Fond plus foncé pour la section à propos */
+.about-section {
+  background: linear-gradient(135deg, #0078a8, #005a80) !important; /* Fond bleu foncé */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Formes d'arrière-plan plus subtiles */
+.about-bg-shape-1,
+.about-bg-shape-2 {
+  opacity: 0.1 !important; /* Réduire l'opacité pour un meilleur contraste */
+}
+
+/* Texte en blanc pour un contraste maximal */
+.about-section h2.section-title {
+  color: #ffffff !important; /* Blanc pur pour un contraste maximal */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important; /* Ombre légère pour améliorer la lisibilité */
+}
+
+.about-text-intro p {
+  color: #ffffff !important; /* Blanc pur pour un contraste maximal */
+  font-weight: 500 !important; /* Police légèrement plus grasse pour améliorer la lisibilité */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important; /* Ombre légère pour améliorer la lisibilité */
+}
+
+/* Amélioration du contraste des cartes de valeurs */
+.about-value-card {
+  background: rgba(255, 255, 255, 0.95) !important; /* Fond blanc légèrement transparent */
+  border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Bordure légère pour définir les limites */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important; /* Ombre plus prononcée */
+  border-radius: 8px !important; /* Coins arrondis */
+  padding: 20px !important; /* Padding plus grand */
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* Transition douce */
+}
+
+.about-value-card:hover {
+  transform: translateY(-5px) !important; /* Effet de survol */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important; /* Ombre plus prononcée au survol */
+}
+
+.about-value-card h4 {
+  color: #0078a8 !important; /* Bleu vif pour un bon contraste sur fond blanc */
+  font-weight: 700 !important; /* Police plus grasse pour améliorer la lisibilité */
+}
+
+.about-value-card p {
+  color: #333 !important; /* Texte foncé pour un bon contraste sur fond blanc */
+}
+
+.about-value-icon {
+  color: #0078a8 !important; /* Bleu vif pour un bon contraste sur fond blanc */
+  font-size: 2rem !important; /* Icône plus grande */
+  margin-bottom: 15px !important; /* Plus d'espace sous l'icône */
+}
+
+/* Amélioration du contraste du texte principal */
+.about-text p {
+  color: #ffffff !important; /* Blanc pur pour un contraste maximal */
+  font-weight: 500 !important; /* Police légèrement plus grasse pour améliorer la lisibilité */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important; /* Ombre légère pour améliorer la lisibilité */
+  font-size: 1.05rem !important; /* Texte légèrement plus grand */
+  line-height: 1.7 !important; /* Interligne plus grand */
+  margin-bottom: 1.2rem !important; /* Plus d'espace entre les paragraphes */
+}
+
+.about-text strong {
+  color: #ffffff !important; /* Blanc pur pour un contraste maximal */
+  font-weight: 700 !important; /* Police plus grasse pour améliorer la lisibilité */
+}
+
+/* Amélioration du contraste du bouton CTA */
+.about-cta .btn-outline {
+  background: transparent !important; /* Fond transparent */
+  color: #ffffff !important; /* Texte blanc */
+  border: 2px solid #ffffff !important; /* Bordure blanche */
+  font-weight: 600 !important; /* Police plus grasse */
+  padding: 12px 25px !important; /* Padding plus grand */
+  transition: background 0.3s ease, color 0.3s ease !important; /* Transition douce */
+}
+
+.about-cta .btn-outline:hover {
+  background: #ffffff !important; /* Fond blanc au survol */
+  color: #0078a8 !important; /* Texte bleu au survol */
+}
+
+/* Amélioration de l'image */
+.about-image-wrapper {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important; /* Ombre plus prononcée */
+  border: 3px solid rgba(255, 255, 255, 0.2) !important; /* Bordure blanche semi-transparente */
+}
+
+.about-image-pattern {
+  opacity: 0.15 !important; /* Réduire l'opacité pour un meilleur contraste */
+}
+
+/* ===== OPTIMISATIONS POUR MOBILE ===== */
+@media (max-width: 768px) {
+  /* Fond encore plus foncé sur mobile pour un meilleur contraste */
+  .about-section {
+    background: linear-gradient(135deg, #006690, #004d6d) !important; /* Fond bleu plus foncé sur mobile */
+  }
+  
+  /* Texte plus grand sur mobile pour une meilleure lisibilité */
+  .about-section h2.section-title {
+    font-size: 1.8rem !important; /* Texte plus grand pour une meilleure lisibilité */
+    margin-bottom: 1.5rem !important; /* Plus d'espace sous le titre */
+  }
+  
+  .about-text-intro p {
+    font-size: 1.1rem !important; /* Texte plus grand pour une meilleure lisibilité */
+    line-height: 1.7 !important; /* Interligne plus grand pour une meilleure lisibilité */
+    margin-bottom: 1.5rem !important; /* Plus d'espace sous l'introduction */
+  }
+  
+  /* Amélioration du contraste des cartes de valeurs sur mobile */
+  .about-values-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* 2 colonnes sur mobile */
+    gap: 15px !important; /* Espace entre les cartes */
+  }
+  
+  .about-value-card {
+    padding: 15px !important; /* Padding plus petit sur mobile */
+  }
+  
+  .about-value-card h4 {
+    font-size: 1.1rem !important; /* Texte plus petit sur mobile */
+    margin-bottom: 8px !important; /* Moins d'espace sous le titre */
+  }
+  
+  .about-value-card p {
+    font-size: 0.9rem !important; /* Texte plus petit sur mobile */
+    line-height: 1.5 !important; /* Interligne plus petit sur mobile */
+  }
+  
+  .about-value-icon {
+    font-size: 1.8rem !important; /* Icône plus petite sur mobile */
+    margin-bottom: 10px !important; /* Moins d'espace sous l'icône */
+  }
+  
+  /* Amélioration du contraste du texte principal sur mobile */
+  .about-text p {
+    font-size: 1rem !important; /* Texte plus petit sur mobile */
+    line-height: 1.6 !important; /* Interligne plus petit sur mobile */
+    margin-bottom: 1rem !important; /* Moins d'espace entre les paragraphes */
+  }
+  
+  /* Amélioration du contraste du bouton CTA sur mobile */
+  .about-cta .btn-outline {
+    padding: 10px 20px !important; /* Padding plus petit sur mobile */
+    font-size: 1rem !important; /* Texte plus petit sur mobile */
+    width: 100% !important; /* Bouton pleine largeur sur mobile */
+    text-align: center !important; /* Texte centré */
+  }
+}
+
+/* ===== OPTIMISATIONS POUR LES TRÈS PETITS ÉCRANS ===== */
+@media (max-width: 375px) {
+  /* Fond encore plus foncé sur très petits écrans */
+  .about-section {
+    background: linear-gradient(135deg, #005a80, #004060) !important; /* Fond bleu encore plus foncé */
+  }
+  
+  /* Texte plus grand sur très petits écrans */
+  .about-section h2.section-title {
+    font-size: 1.6rem !important;
+  }
+  
+  /* Cartes en une seule colonne sur très petits écrans */
+  .about-values-grid {
+    grid-template-columns: 1fr !important; /* 1 colonne sur très petits écrans */
+  }
+}
+
+/* ===== OPTIMISATIONS POUR LE MODE SOMBRE ===== */
+@media (prefers-color-scheme: dark) {
+  /* Fond encore plus foncé en mode sombre */
+  .about-section {
+    background: linear-gradient(135deg, #004d6d, #003a54) !important; /* Fond bleu encore plus foncé en mode sombre */
+  }
+  
+  /* Texte plus lumineux en mode sombre */
+  .about-section h2.section-title,
+  .about-text-intro p,
+  .about-text p,
+  .about-text strong {
+    color: #ffffff !important; /* Blanc pur pour un contraste maximal */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important; /* Ombre plus prononcée en mode sombre */
+  }
+  
+  /* Cartes plus contrastées en mode sombre */
+  .about-value-card {
+    background: rgba(255, 255, 255, 0.98) !important; /* Fond blanc plus opaque */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2) !important; /* Ombre plus prononcée */
+  }
+}
+
+/* ===== OPTIMISATIONS POUR LES UTILISATEURS MALVOYANTS ===== */
+@media (prefers-contrast: more) {
+  /* Fond très foncé pour un contraste maximal */
+  .about-section {
+    background: #003a54 !important; /* Bleu très foncé uni pour un contraste maximal */
+  }
+  
+  /* Texte blanc pur pour un contraste maximal */
+  .about-section h2.section-title,
+  .about-text-intro p,
+  .about-text p,
+  .about-text strong {
+    color: #ffffff !important; /* Blanc pur */
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important; /* Ombre plus prononcée */
+    font-weight: 700 !important; /* Police plus grasse */
+  }
+  
+  /* Cartes avec bordure noire pour un contraste maximal */
+  .about-value-card {
+    background: #ffffff !important; /* Fond blanc pur */
+    border: 3px solid #000000 !important; /* Bordure noire épaisse */
+    box-shadow: none !important; /* Pas d'ombre pour éviter la confusion */
+  }
+  
+  /* Texte noir pur dans les cartes pour un contraste maximal */
+  .about-value-card h4 {
+    color: #000000 !important; /* Noir pur */
+    font-weight: 700 !important; /* Police plus grasse */
+  }
+  
+  .about-value-card p {
+    color: #000000 !important; /* Noir pur */
+    font-weight: 600 !important; /* Police plus grasse */
+  }
+  
+  /* Icônes noires pour un contraste maximal */
+  .about-value-icon {
+    color: #000000 !important; /* Noir pur */
+  }
+  
+  /* Bouton CTA très contrastant */
+  .about-cta .btn-outline {
+    background: #ffffff !important; /* Fond blanc pur */
+    color: #000000 !important; /* Texte noir pur */
+    border: 3px solid #000000 !important; /* Bordure noire épaisse */
+    font-weight: 700 !important; /* Police plus grasse */
+  }
+}

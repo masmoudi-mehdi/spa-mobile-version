@@ -1,0 +1,134 @@
+/*
+ * spa-mobile - iOS Scroll Fix
+ * Corrections pour les problèmes de défilement sur iOS
+ */
+
+/* ===== CORRECTIONS POUR LE DÉFILEMENT SUR iOS ===== */
+
+/* Correction du défilement sur le body */
+html, body {
+  -webkit-overflow-scrolling: touch !important;
+  overflow-y: auto !important;
+  overscroll-behavior-y: none !important;
+  position: relative !important;
+  height: auto !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* S'assurer que le contenu principal est défilable */
+main, .main-content {
+  -webkit-overflow-scrolling: touch !important;
+  overflow-y: visible !important;
+  position: relative !important;
+}
+
+/* Correction pour les sections qui pourraient bloquer le défilement */
+section {
+  -webkit-overflow-scrolling: touch !important;
+  overflow: visible !important;
+  position: relative !important;
+  height: auto !important;
+  min-height: auto !important;
+}
+
+/* Correction pour les éléments fixed qui peuvent interférer avec le défilement */
+.fixed-element {
+  position: fixed !important;
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+}
+
+/* Correction pour les éléments avec position: sticky */
+.sticky-element {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+}
+
+/* Correction pour les éléments avec des événements tactiles qui peuvent bloquer le défilement */
+[data-haptic="true"],
+.swipe-indicator,
+.contrast-controls,
+.mobile-toggle,
+.btn,
+.btn-oxygen,
+.btn-primary,
+.btn-outline,
+a,
+button {
+  touch-action: manipulation !important;
+}
+
+/* Correction pour les éléments qui utilisent des transformations CSS */
+.transform-element {
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+  will-change: transform !important;
+}
+
+/* Correction pour les éléments avec position: fixed qui peuvent causer des problèmes sur iOS */
+header, .fixed-header {
+  -webkit-transform: translateZ(0) !important;
+  transform: translateZ(0) !important;
+  will-change: transform !important;
+}
+
+/* Correction pour les conteneurs qui pourraient avoir overflow: hidden */
+.container, .section-container {
+  overflow: visible !important;
+}
+
+/* Correction spécifique pour iOS 15+ */
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* Désactiver le comportement de défilement élastique sur iOS */
+    overscroll-behavior-y: none !important;
+  }
+  
+  /* Correction pour le viewport sur iOS */
+  .viewport-fix {
+    height: 100% !important;
+    position: relative !important;
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+/* Correction pour les animations qui peuvent interférer avec le défilement */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Correction pour les gestionnaires de défilement personnalisés */
+.custom-scroll {
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Correction pour les éléments avec height: 100vh qui peuvent causer des problèmes sur iOS */
+.full-height {
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: none !important;
+}
+
+/* Correction pour les éléments avec des événements de défilement personnalisés */
+[data-scroll],
+[data-scroll-container],
+[data-scroll-section] {
+  overflow: visible !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Correction pour les éléments avec des gestionnaires d'événements tactiles */
+.touch-element {
+  touch-action: pan-y !important;
+}
