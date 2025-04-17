@@ -1,0 +1,107 @@
+/*
+ * spa-mobile - Haptic Feedback Styles
+ * Styles pour les éléments liés au retour haptique
+ */
+
+/* Styles pour l'option de retour haptique dans le menu */
+.haptic-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.haptic-option:hover {
+    background-color: #f0f0f0;
+}
+
+.haptic-option:focus {
+    outline: 2px solid #0078a8;
+    outline-offset: 2px;
+}
+
+.haptic-option i {
+    color: #0078a8;
+    font-size: 1.2rem;
+}
+
+/* Indicateur visuel pour les éléments avec retour haptique */
+[data-haptic="true"] {
+    position: relative;
+}
+
+[data-haptic="true"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+[data-haptic="true"]:active::after {
+    opacity: 1;
+}
+
+/* Styles pour les éléments interactifs avec retour haptique */
+.btn[data-haptic="true"],
+.btn-oxygen[data-haptic="true"],
+.benefit-card[data-haptic="true"],
+.testimonial-card[data-haptic="true"],
+.gallery-item[data-haptic="true"],
+.oxygen-benefit[data-haptic="true"] {
+    transform: translateZ(0); /* Activer l'accélération matérielle */
+    will-change: transform; /* Optimiser les performances */
+}
+
+/* Animation subtile pour le retour haptique */
+@keyframes haptic-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.98); }
+    100% { transform: scale(1); }
+}
+
+.haptic-pulse {
+    animation: haptic-pulse 0.2s ease;
+}
+
+/* Styles pour les appareils qui ne supportent pas la vibration */
+@media (hover: hover) {
+    [data-haptic="true"]:hover {
+        transition: transform 0.2s ease;
+    }
+    
+    .btn[data-haptic="true"]:hover,
+    .btn-oxygen[data-haptic="true"]:hover {
+        transform: translateY(-2px);
+    }
+    
+    .benefit-card[data-haptic="true"]:hover,
+    .testimonial-card[data-haptic="true"]:hover,
+    .gallery-item[data-haptic="true"]:hover,
+    .oxygen-benefit[data-haptic="true"]:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* Styles pour le mode sombre */
+@media (prefers-color-scheme: dark) {
+    .haptic-option:hover {
+        background-color: #444;
+    }
+    
+    [data-haptic="true"]::after {
+        background: rgba(0, 0, 0, 0.1);
+    }
+}

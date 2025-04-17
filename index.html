@@ -56,6 +56,7 @@
     <link rel="stylesheet" href="css/accessibility-optimizations.css" />
     <link rel="stylesheet" href="css/contrast-optimizations.css" />
     <link rel="stylesheet" href="css/contrast-controls.css" />
+    <link rel="stylesheet" href="css/haptic-feedback.css" />
     <link rel="stylesheet" href="css/print.css" media="print" />
 
     <style>
@@ -275,10 +276,12 @@
             premium, sans vous déplacer.
           </p>
           <div class="hero-buttons fade-in-up delay-2">
-            <a href="#oxygeno" class="btn btn-primary"
+            <a href="#oxygeno" class="btn btn-primary" data-haptic="true"
               >Découvrir l'Oxygénothérapie</a
             >
-            <a href="#concept" class="btn btn-outline">Nos Services</a>
+            <a href="#concept" class="btn btn-outline" data-haptic="true"
+              >Nos Services</a
+            >
           </div>
           <div class="hero-features fade-in-up delay-3">
             <div class="hero-feature">
@@ -367,7 +370,7 @@
         </div>
 
         <div class="oxygen-benefits">
-          <div class="oxygen-benefit">
+          <div class="oxygen-benefit" data-haptic="true">
             <div class="oxygen-benefit-icon">
               <i class="fas fa-brain"></i>
             </div>
@@ -378,7 +381,7 @@
             </p>
           </div>
 
-          <div class="oxygen-benefit">
+          <div class="oxygen-benefit" data-haptic="true">
             <div class="oxygen-benefit-icon">
               <i class="fas fa-heartbeat"></i>
             </div>
@@ -389,7 +392,7 @@
             </p>
           </div>
 
-          <div class="oxygen-benefit">
+          <div class="oxygen-benefit" data-haptic="true">
             <div class="oxygen-benefit-icon">
               <i class="fas fa-smile-beam"></i>
             </div>
@@ -400,7 +403,7 @@
             </p>
           </div>
 
-          <div class="oxygen-benefit">
+          <div class="oxygen-benefit" data-haptic="true">
             <div class="oxygen-benefit-icon">
               <i class="fas fa-bed"></i>
             </div>
@@ -413,7 +416,7 @@
         </div>
 
         <div class="oxygen-cta">
-          <a href="#contact" class="btn-oxygen"
+          <a href="#contact" class="btn-oxygen" data-haptic="true"
             >Réserver une Séance d'Oxygénothérapie</a
           >
         </div>
@@ -1015,7 +1018,7 @@
           <div class="contact-form">
             <h3>Envoyez-nous un Message</h3>
 
-            <form id="contact-form">
+            <form id="contact-form" data-haptic="true">
               <div class="form-group">
                 <input
                   type="text"
@@ -1054,7 +1057,9 @@
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn">Envoyer</button>
+              <button type="submit" class="btn" data-haptic="true">
+                Envoyer
+              </button>
             </form>
           </div>
         </div>
@@ -1073,10 +1078,16 @@
             </p>
 
             <div class="social-links">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" data-haptic="true"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" data-haptic="true"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" data-haptic="true"><i class="fab fa-twitter"></i></a>
+              <a href="#" data-haptic="true"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
           </div>
 
@@ -1113,7 +1124,7 @@
               bien-être.
             </p>
 
-            <form class="newsletter-form">
+            <form class="newsletter-form" data-haptic="true">
               <div class="form-group">
                 <input
                   type="email"
@@ -1122,7 +1133,9 @@
                   required
                 />
               </div>
-              <button type="submit" class="btn">S'abonner</button>
+              <button type="submit" class="btn" data-haptic="true">
+                S'abonner
+              </button>
             </form>
           </div>
         </div>
@@ -1138,6 +1151,7 @@
     <script src="js/mobile-navigation.js"></script>
     <script src="js/mobile-forms.js"></script>
     <script src="js/contrast-controls.js"></script>
+    <script src="js/haptic-feedback.js"></script>
     <script src="js/main.js"></script>
     <script src="js/image-optimizations.js"></script>
   </body>
