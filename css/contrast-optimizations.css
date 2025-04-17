@@ -1,0 +1,366 @@
+/*
+ * spa-mobile - Contrast Optimizations
+ * Optimisations de contraste pour une meilleure accessibilité et expérience mobile
+ */
+
+/* ===== OPTIMISATIONS GÉNÉRALES DE CONTRASTE ===== */
+
+/* Amélioration du contraste des textes principaux */
+body {
+  color: #222; /* Texte plus foncé pour un meilleur contraste */
+}
+
+p {
+  color: #333; /* Assurer que tous les paragraphes ont un contraste suffisant */
+}
+
+/* Amélioration du contraste des titres */
+h1, h2, h3, h4, h5, h6 {
+  color: #006690; /* Bleu légèrement plus foncé pour un meilleur contraste */
+}
+
+/* Amélioration du contraste des liens */
+a {
+  color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+}
+
+a:hover {
+  color: #004d6d; /* Version encore plus foncée pour le survol */
+}
+
+/* ===== OPTIMISATIONS DE CONTRASTE POUR LE HEADER ===== */
+
+/* Amélioration du contraste du logo */
+.logo {
+  color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+}
+
+.logo span {
+  color: #009b94; /* Turquoise plus foncé pour un meilleur contraste */
+}
+
+/* Amélioration du contraste des liens de navigation */
+nav ul li a {
+  color: #222; /* Texte plus foncé pour un meilleur contraste */
+  font-weight: 700; /* Police plus grasse pour améliorer la lisibilité */
+}
+
+nav ul li a:hover {
+  color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+}
+
+/* ===== OPTIMISATIONS DE CONTRASTE POUR LE HERO ===== */
+
+/* Amélioration du contraste de l'overlay du hero */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(0, 60, 120, 0.85) 0%, rgba(0, 100, 140, 0.7) 100%); /* Overlay plus foncé pour un meilleur contraste */
+}
+
+/* Amélioration du contraste du contenu du hero */
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Fond plus foncé pour un meilleur contraste */
+}
+
+.hero h1 {
+  color: #ffffff; /* Blanc pur pour un contraste maximal */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre plus prononcée pour améliorer la lisibilité */
+}
+
+.hero h1 .highlight {
+  color: #00d8ce; /* Turquoise plus vif pour un meilleur contraste */
+}
+
+.hero p {
+  color: #ffffff; /* Blanc pur pour un contraste maximal */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); /* Ombre plus prononcée pour améliorer la lisibilité */
+}
+
+/* Amélioration du contraste des boutons */
+.btn-primary {
+  background-color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+  color: #ffffff; /* Blanc pur pour un contraste maximal */
+  border: 2px solid transparent; /* Bordure pour améliorer la visibilité */
+}
+
+.btn-primary:hover {
+  background-color: #004d6d; /* Version encore plus foncée pour le survol */
+}
+
+.btn-outline {
+  border: 2px solid #ffffff; /* Bordure plus visible */
+  color: #ffffff; /* Blanc pur pour un contraste maximal */
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Fond plus visible au survol */
+}
+
+/* Amélioration du contraste des caractéristiques du hero */
+.hero-feature {
+  color: #ffffff; /* Blanc pur pour un contraste maximal */
+}
+
+.hero-feature i {
+  color: #00d8ce; /* Turquoise plus vif pour un meilleur contraste */
+}
+
+/* ===== OPTIMISATIONS DE CONTRASTE POUR LA SECTION OXYGÉNOTHÉRAPIE ===== */
+
+/* Amélioration du contraste du badge */
+.oxygen-badge {
+  background: #006690; /* Bleu plus foncé pour un meilleur contraste */
+  color: #ffffff; /* Blanc pur pour un contraste maximal */
+  font-weight: 700; /* Police plus grasse pour améliorer la lisibilité */
+  border: 1px solid #ffffff; /* Bordure pour améliorer la visibilité */
+}
+
+/* Amélioration du contraste des icônes de bienfaits */
+.oxygen-benefit-icon {
+  color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+}
+
+/* Amélioration du contraste des titres de bienfaits */
+.oxygen-benefit h4 {
+  color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+  font-weight: 700; /* Police plus grasse pour améliorer la lisibilité */
+}
+
+/* Amélioration du contraste du texte des bienfaits */
+.oxygen-benefit p {
+  color: #333; /* Texte plus foncé pour un meilleur contraste */
+}
+
+/* Amélioration du contraste du bouton d'appel à l'action */
+.btn-oxygen {
+  background: #006690; /* Bleu plus foncé pour un meilleur contraste */
+  color: #ffffff; /* Blanc pur pour un contraste maximal */
+  border: 2px solid transparent; /* Bordure pour améliorer la visibilité */
+  font-weight: 700; /* Police plus grasse pour améliorer la lisibilité */
+}
+
+.btn-oxygen:hover {
+  background: #004d6d; /* Version encore plus foncée pour le survol */
+}
+
+/* ===== OPTIMISATIONS DE CONTRASTE POUR LES SECTIONS DE CONTENU ===== */
+
+/* Amélioration du contraste des cartes de bienfaits */
+.benefit-card {
+  border: 1px solid #ddd; /* Bordure pour améliorer la visibilité */
+}
+
+.benefit-icon {
+  background-color: rgba(0, 102, 144, 0.15); /* Fond plus contrasté */
+  color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+}
+
+.benefit-card:hover .benefit-icon {
+  background-color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+}
+
+/* Amélioration du contraste des caractéristiques du concept */
+.concept-feature-icon {
+  color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+}
+
+.concept-feature h4 {
+  color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+  font-weight: 700; /* Police plus grasse pour améliorer la lisibilité */
+}
+
+/* ===== OPTIMISATIONS DE CONTRASTE POUR LE PIED DE PAGE ===== */
+
+/* Amélioration du contraste des titres du pied de page */
+.footer-col h3 {
+  color: #ffffff; /* Blanc pur pour un contraste maximal */
+}
+
+/* Amélioration du contraste des liens du pied de page */
+.footer-col ul li a {
+  color: #dddddd; /* Gris plus clair pour un meilleur contraste */
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff; /* Blanc pur pour un contraste maximal au survol */
+}
+
+/* Amélioration du contraste des icônes sociales */
+.social-links a {
+  background-color: #444; /* Fond plus clair pour un meilleur contraste */
+}
+
+.social-links a:hover {
+  background-color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+}
+
+/* Amélioration du contraste du copyright */
+.copyright {
+  color: #dddddd; /* Gris plus clair pour un meilleur contraste */
+}
+
+/* ===== OPTIMISATIONS DE CONTRASTE POUR MOBILE ===== */
+
+@media (max-width: 768px) {
+  /* Amélioration du contraste des textes sur mobile */
+  p {
+    color: #222; /* Texte encore plus foncé sur mobile */
+  }
+  
+  /* Amélioration du contraste du menu mobile */
+  nav {
+    background-color: #f8f9fa; /* Fond plus contrasté */
+    border-bottom: 2px solid #006690; /* Bordure pour améliorer la visibilité */
+  }
+  
+  nav ul li a {
+    font-size: 1.1rem; /* Texte plus grand pour une meilleure lisibilité */
+    padding: 12px 0; /* Zone tactile plus grande */
+  }
+  
+  /* Amélioration du contraste du toggle mobile */
+  .mobile-toggle span {
+    background-color: #006690; /* Bleu plus foncé pour un meilleur contraste */
+    height: 3px; /* Lignes plus épaisses */
+  }
+  
+  /* Amélioration du contraste du hero sur mobile */
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Fond encore plus foncé sur mobile */
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem; /* Texte plus grand pour une meilleure lisibilité */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7); /* Ombre plus prononcée */
+  }
+  
+  .hero p {
+    font-size: 1.1rem; /* Texte plus grand pour une meilleure lisibilité */
+    line-height: 1.7; /* Interligne plus grand pour une meilleure lisibilité */
+  }
+  
+  /* Amélioration du contraste des boutons sur mobile */
+  .btn, .btn-oxygen {
+    padding: 14px 30px; /* Boutons plus grands pour une meilleure zone tactile */
+    font-size: 1rem; /* Texte plus grand pour une meilleure lisibilité */
+    border-width: 2px; /* Bordure plus épaisse */
+  }
+  
+  /* Amélioration du contraste des cartes sur mobile */
+  .oxygen-benefit, .benefit-card, .testimonial-card {
+    border: 1px solid #ddd; /* Bordure pour améliorer la visibilité */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
+  }
+  
+  .oxygen-benefit h4, .benefit-card h3, .testimonial-card h3 {
+    font-size: 1.4rem; /* Texte plus grand pour une meilleure lisibilité */
+  }
+  
+  .oxygen-benefit p, .benefit-card p, .testimonial-card p {
+    font-size: 1rem; /* Texte plus grand pour une meilleure lisibilité */
+    line-height: 1.7; /* Interligne plus grand pour une meilleure lisibilité */
+  }
+}
+
+/* ===== OPTIMISATIONS DE CONTRASTE POUR LES PETITS ÉCRANS ===== */
+
+@media (max-width: 480px) {
+  /* Amélioration du contraste des textes sur petits écrans */
+  p {
+    font-size: 1rem; /* Texte plus grand pour une meilleure lisibilité */
+    line-height: 1.8; /* Interligne plus grand pour une meilleure lisibilité */
+  }
+  
+  /* Amélioration du contraste des titres sur petits écrans */
+  h1 {
+    font-size: 2rem; /* Texte plus grand pour une meilleure lisibilité */
+  }
+  
+  h2 {
+    font-size: 1.8rem; /* Texte plus grand pour une meilleure lisibilité */
+  }
+  
+  h3 {
+    font-size: 1.5rem; /* Texte plus grand pour une meilleure lisibilité */
+  }
+  
+  /* Amélioration du contraste des boutons sur petits écrans */
+  .btn, .btn-oxygen {
+    width: 100%; /* Boutons pleine largeur pour une meilleure zone tactile */
+    text-align: center; /* Texte centré */
+    margin-bottom: 10px; /* Espacement entre les boutons */
+  }
+  
+  /* Amélioration du contraste des cartes sur petits écrans */
+  .oxygen-benefit, .benefit-card, .testimonial-card {
+    padding: 20px 15px; /* Padding plus grand pour une meilleure lisibilité */
+  }
+}
+
+/* ===== OPTIMISATIONS DE CONTRASTE POUR LES MODES SOMBRES ===== */
+
+@media (prefers-color-scheme: dark) {
+  /* Ces styles s'appliqueront automatiquement si l'utilisateur a activé le mode sombre sur son appareil */
+  
+  /* Amélioration du contraste des textes en mode sombre */
+  .oxygen-benefit p, .benefit-card p, .testimonial-card p, .concept-feature p, .about-text p {
+    color: #222; /* Texte plus foncé pour un meilleur contraste sur fond clair */
+  }
+  
+  /* Amélioration du contraste des boutons en mode sombre */
+  .btn-primary, .btn-oxygen {
+    background-color: #0078a8; /* Bleu plus vif pour un meilleur contraste en mode sombre */
+    border: 2px solid #ffffff; /* Bordure blanche pour améliorer la visibilité */
+  }
+  
+  /* Amélioration du contraste des cartes en mode sombre */
+  .oxygen-benefit, .benefit-card, .testimonial-card {
+    border: 2px solid #ddd; /* Bordure plus épaisse pour améliorer la visibilité */
+  }
+}
+
+/* ===== OPTIMISATIONS DE CONTRASTE POUR LES UTILISATEURS MALVOYANTS ===== */
+
+@media (prefers-contrast: more) {
+  /* Ces styles s'appliqueront automatiquement si l'utilisateur a activé le mode contraste élevé */
+  
+  /* Amélioration du contraste global */
+  body {
+    color: #000000; /* Noir pur pour un contraste maximal */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #004d6d; /* Bleu très foncé pour un contraste maximal */
+  }
+  
+  a {
+    color: #004d6d; /* Bleu très foncé pour un contraste maximal */
+    text-decoration: underline; /* Soulignement pour améliorer la visibilité */
+  }
+  
+  /* Amélioration du contraste des boutons */
+  .btn, .btn-oxygen {
+    background-color: #004d6d; /* Bleu très foncé pour un contraste maximal */
+    color: #ffffff; /* Blanc pur pour un contraste maximal */
+    border: 3px solid #000000; /* Bordure noire pour améliorer la visibilité */
+  }
+  
+  /* Amélioration du contraste des cartes */
+  .oxygen-benefit, .benefit-card, .testimonial-card {
+    border: 2px solid #000000; /* Bordure noire pour améliorer la visibilité */
+    background-color: #ffffff; /* Fond blanc pour un contraste maximal */
+  }
+  
+  /* Amélioration du contraste des icônes */
+  .oxygen-benefit-icon, .benefit-icon, .concept-feature-icon {
+    color: #004d6d; /* Bleu très foncé pour un contraste maximal */
+  }
+  
+  /* Amélioration du contraste du pied de page */
+  footer {
+    background-color: #111111; /* Fond très foncé pour un contraste maximal */
+  }
+  
+  .footer-col ul li a {
+    color: #ffffff; /* Blanc pur pour un contraste maximal */
+  }
+}
