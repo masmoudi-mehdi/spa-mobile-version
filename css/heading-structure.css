@@ -1,0 +1,175 @@
+/*
+ * spa-mobile - Heading Structure
+ * Amélioration de la structure des titres (h1-h6) pour une meilleure accessibilité et SEO
+ */
+
+/* ===== STRUCTURE GÉNÉRALE DES TITRES ===== */
+
+/* Titre principal (h1) - Un seul par page */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Titres de section (h2) */
+h2.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+/* Sous-titres principaux (h3) */
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+/* Titres de cartes et éléments (h4) */
+h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+/* Titres de niveau 5 (h5) - Ajoutés pour compléter la hiérarchie */
+h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+}
+
+/* Titres de niveau 6 (h6) - Ajoutés pour compléter la hiérarchie */
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.6rem;
+}
+
+/* ===== AMÉLIORATIONS POUR L'ACCESSIBILITÉ ===== */
+
+/* Ajouter un outline pour les titres lors de la navigation au clavier */
+h1:focus, h2:focus, h3:focus, h4:focus, h5:focus, h6:focus {
+  outline: 2px solid #0078a8;
+  outline-offset: 2px;
+}
+
+/* Améliorer le contraste des titres */
+.section-dark h2, 
+.section-dark h3, 
+.section-dark h4, 
+.section-dark h5, 
+.section-dark h6 {
+  color: #ffffff;
+}
+
+.section-light h2, 
+.section-light h3, 
+.section-light h4, 
+.section-light h5, 
+.section-light h6 {
+  color: #004d6d;
+}
+
+.section-accent h2, 
+.section-accent h3, 
+.section-accent h4, 
+.section-accent h5, 
+.section-accent h6 {
+  color: #ffffff;
+}
+
+/* ===== OPTIMISATIONS POUR MOBILE ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  h6 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ===== OPTIMISATIONS POUR LES TRÈS PETITS ÉCRANS ===== */
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2.section-title {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+  
+  h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== OPTIMISATIONS POUR LES UTILISATEURS MALVOYANTS ===== */
+@media (prefers-contrast: more) {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+  
+  .section-dark h2, 
+  .section-dark h3, 
+  .section-dark h4, 
+  .section-dark h5, 
+  .section-dark h6 {
+    color: #ffffff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .section-light h2, 
+  .section-light h3, 
+  .section-light h4, 
+  .section-light h5, 
+  .section-light h6 {
+    color: #003a54;
+  }
+}
+
+/* ===== AMÉLIORATIONS POUR LES LECTEURS D'ÉCRAN ===== */
+
+/* Ajouter des attributs aria-level pour les éléments qui agissent comme des titres mais ne sont pas des balises h1-h6 */
+.footer-col h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}

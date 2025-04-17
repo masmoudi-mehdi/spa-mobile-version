@@ -84,14 +84,10 @@
 - [x] **DONE** - Améliorer la navigation au clavier
 - [ ] Ajouter des landmarks ARIA appropriés
 - [ ] Vérifier et améliorer la structure des titres (h1-h6)
-- [ ] Ajouter un lien "Skip to content" pour les utilisateurs de clavier
 
 ### Médias alternatifs
 
 - [ ] Ajouter des descriptions détaillées pour toutes les images (alt text)
-- [ ] Fournir des transcriptions pour tout contenu audio
-- [ ] Ajouter des sous-titres pour les vidéos
-- [ ] Créer des versions alternatives pour les contenus complexes
 
 ### Formulaires accessibles
 
@@ -99,8 +95,6 @@
 - [x] **DONE** - Ajouter des étiquettes visibles pour les champs
 - [x] **DONE** - Améliorer les messages d'erreur
 - [x] **DONE** - Optimiser la validation des formulaires
-- [ ] Ajouter des instructions pour les champs complexes
-- [ ] Améliorer l'ordre de tabulation des formulaires
 
 ### Conformité aux standards
 
