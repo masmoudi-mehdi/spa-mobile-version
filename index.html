@@ -276,7 +276,11 @@
             premium, sans vous déplacer.
           </p>
           <div class="hero-buttons fade-in-up delay-2">
-            <a href="#oxygeno" class="btn btn-primary" data-haptic="true"
+            <a
+              href="#oxygeno"
+              class="btn btn-primary"
+              data-haptic="true"
+              onclick="if(navigator.vibrate) navigator.vibrate(300); console.log('Vibration directe sur CTA principal');"
               >Découvrir l'Oxygénothérapie</a
             >
             <a href="#concept" class="btn btn-outline" data-haptic="true"
@@ -1152,6 +1156,7 @@
     <script src="js/mobile-forms.js"></script>
     <script src="js/contrast-controls.js"></script>
     <script src="js/haptic-feedback.js"></script>
+    <script src="js/vibration-test.js"></script>
     <script src="js/main.js"></script>
     <script src="js/image-optimizations.js"></script>
   </body>
