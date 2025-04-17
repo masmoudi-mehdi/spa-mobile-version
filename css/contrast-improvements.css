@@ -1,0 +1,277 @@
+/*
+ * spa-mobile - Contrast Improvements
+ * Améliorations supplémentaires du contraste pour une meilleure lisibilité
+ */
+
+/* ===== AMÉLIORATIONS GÉNÉRALES DU CONTRASTE ===== */
+
+/* Amélioration du contraste des textes */
+body {
+  color: #111; /* Texte presque noir pour un contraste maximal */
+}
+
+p {
+  color: #222; /* Texte foncé pour un meilleur contraste */
+}
+
+/* Amélioration du contraste des titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #005a80; /* Bleu plus foncé pour un meilleur contraste */
+}
+
+.section-title {
+  color: #004d6d; /* Bleu encore plus foncé pour les titres de section */
+}
+
+/* Amélioration du contraste pour toutes les sections */
+.section-light {
+  background-color: #f9fbfd; /* Fond légèrement plus foncé pour un meilleur contraste */
+}
+
+.section-dark {
+  background-color: #00304d; /* Fond plus foncé pour un meilleur contraste */
+}
+
+.section-dark h2,
+.section-dark h3 {
+  color: #ffffff; /* Blanc pur pour un contraste maximal sur fond foncé */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Ombre légère pour améliorer la lisibilité */
+}
+
+.section-dark p {
+  color: #e6e6e6; /* Gris très clair pour un meilleur contraste sur fond foncé */
+}
+
+/* ===== AMÉLIORATIONS DU CONTRASTE POUR LA SECTION OXYGÉNOTHÉRAPIE ===== */
+
+/* Fond plus clair pour la section oxygénothérapie */
+.oxygen-therapy-section {
+  background: linear-gradient(
+    135deg,
+    #f0faff,
+    #ffffff
+  ) !important; /* Fond plus clair et plus contrasté */
+}
+
+/* Amélioration du contraste du texte dans la section oxygénothérapie */
+.oxygen-therapy-content h3 {
+  color: #004d6d; /* Bleu plus foncé pour un meilleur contraste */
+  font-weight: 700; /* Police plus grasse pour améliorer la lisibilité */
+}
+
+.oxygen-therapy-content p {
+  color: #222; /* Texte plus foncé pour un meilleur contraste */
+  font-weight: 500; /* Police légèrement plus grasse pour améliorer la lisibilité */
+}
+
+/* Amélioration du contraste des cartes de bienfaits */
+.oxygen-benefit {
+  background: #ffffff; /* Fond blanc pur pour un meilleur contraste */
+  border: 1px solid #e0e0e0; /* Bordure légère pour définir les limites */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Ombre plus prononcée */
+}
+
+.oxygen-benefit h4 {
+  color: #004d6d; /* Bleu plus foncé pour un meilleur contraste */
+  font-weight: 700; /* Police plus grasse pour améliorer la lisibilité */
+}
+
+.oxygen-benefit p {
+  color: #333; /* Texte plus foncé pour un meilleur contraste */
+}
+
+.oxygen-benefit-icon {
+  color: #0078a8; /* Bleu plus vif pour un meilleur contraste */
+}
+
+/* Amélioration du contraste du badge */
+.oxygen-badge {
+  background: #004d6d; /* Bleu plus foncé pour un meilleur contraste */
+  color: #ffffff; /* Blanc pur pour un contraste maximal */
+  font-weight: 700; /* Police plus grasse pour améliorer la lisibilité */
+  border: 1px solid #ffffff; /* Bordure blanche pour améliorer la visibilité */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+/* Amélioration du contraste du bouton CTA */
+.btn-oxygen {
+  background: #004d6d; /* Bleu plus foncé pour un meilleur contraste */
+  color: #ffffff; /* Blanc pur pour un contraste maximal */
+  font-weight: 700; /* Police plus grasse pour améliorer la lisibilité */
+  border: 2px solid transparent; /* Bordure pour améliorer la visibilité */
+  box-shadow: 0 5px 15px rgba(0, 77, 109, 0.3); /* Ombre plus prononcée */
+}
+
+.btn-oxygen:hover {
+  background: #003a54; /* Version encore plus foncée pour le survol */
+  box-shadow: 0 8px 20px rgba(0, 77, 109, 0.4); /* Ombre plus prononcée au survol */
+}
+
+/* ===== AMÉLIORATIONS DU CONTRASTE POUR MOBILE ===== */
+
+@media (max-width: 768px) {
+  /* Amélioration du contraste des textes sur mobile */
+  p {
+    color: #111; /* Texte presque noir sur mobile */
+    font-weight: 500; /* Police légèrement plus grasse pour améliorer la lisibilité */
+  }
+
+  /* Amélioration du contraste de la section oxygénothérapie sur mobile */
+  .oxygen-therapy-section {
+    background: linear-gradient(
+      135deg,
+      #f5faff,
+      #ffffff
+    ) !important; /* Fond encore plus clair sur mobile */
+  }
+
+  .oxygen-therapy-content h3 {
+    font-size: 1.6rem; /* Texte plus grand pour une meilleure lisibilité */
+    margin-bottom: 15px; /* Plus d'espace sous le titre */
+  }
+
+  .oxygen-therapy-content p {
+    font-size: 1rem; /* Texte plus grand pour une meilleure lisibilité */
+    line-height: 1.7; /* Interligne plus grand pour une meilleure lisibilité */
+    margin-bottom: 15px; /* Plus d'espace entre les paragraphes */
+  }
+
+  /* Amélioration du contraste des cartes de bienfaits sur mobile */
+  .oxygen-benefit {
+    padding: 20px; /* Padding plus grand pour une meilleure lisibilité */
+    margin-bottom: 15px; /* Plus d'espace entre les cartes */
+    border: 1px solid #d0d0d0; /* Bordure plus visible */
+  }
+
+  .oxygen-benefit h4 {
+    font-size: 1.3rem; /* Texte plus grand pour une meilleure lisibilité */
+    margin-bottom: 12px; /* Plus d'espace sous le titre */
+  }
+
+  .oxygen-benefit p {
+    font-size: 1rem; /* Texte plus grand pour une meilleure lisibilité */
+    line-height: 1.7; /* Interligne plus grand pour une meilleure lisibilité */
+  }
+
+  .oxygen-benefit-icon {
+    font-size: 2.2rem; /* Icône plus grande pour une meilleure visibilité */
+    margin-bottom: 15px; /* Plus d'espace sous l'icône */
+  }
+
+  /* Amélioration du contraste du bouton CTA sur mobile */
+  .btn-oxygen {
+    padding: 15px 30px; /* Bouton plus grand pour une meilleure zone tactile */
+    font-size: 1.1rem; /* Texte plus grand pour une meilleure lisibilité */
+    border-width: 2px; /* Bordure plus épaisse */
+  }
+}
+
+/* ===== AMÉLIORATIONS DU CONTRASTE POUR LES PETITS ÉCRANS ===== */
+
+@media (max-width: 480px) {
+  /* Amélioration du contraste des textes sur petits écrans */
+  .oxygen-therapy-content h3 {
+    font-size: 1.5rem; /* Texte plus grand pour une meilleure lisibilité */
+  }
+
+  .oxygen-therapy-content p {
+    font-size: 1rem; /* Texte plus grand pour une meilleure lisibilité */
+    line-height: 1.8; /* Interligne plus grand pour une meilleure lisibilité */
+  }
+
+  /* Amélioration du contraste des cartes de bienfaits sur petits écrans */
+  .oxygen-benefit {
+    padding: 18px 15px; /* Padding plus grand pour une meilleure lisibilité */
+  }
+
+  .oxygen-benefit h4 {
+    font-size: 1.2rem; /* Texte plus grand pour une meilleure lisibilité */
+  }
+
+  .oxygen-benefit p {
+    font-size: 1rem; /* Texte plus grand pour une meilleure lisibilité */
+  }
+}
+
+/* ===== AMÉLIORATIONS DU CONTRASTE POUR LES MODES SOMBRES ===== */
+
+@media (prefers-color-scheme: dark) {
+  /* Amélioration du contraste de la section oxygénothérapie en mode sombre */
+  .oxygen-therapy-section {
+    background: linear-gradient(
+      135deg,
+      #e6f7ff,
+      #f5faff
+    ) !important; /* Fond plus clair en mode sombre */
+  }
+
+  .oxygen-therapy-content h3,
+  .oxygen-benefit h4 {
+    color: #003a54; /* Bleu très foncé pour un contraste maximal en mode sombre */
+  }
+
+  .oxygen-therapy-content p,
+  .oxygen-benefit p {
+    color: #111; /* Texte presque noir pour un contraste maximal en mode sombre */
+  }
+
+  .oxygen-benefit {
+    background: #ffffff; /* Fond blanc pur pour un contraste maximal en mode sombre */
+    border: 1px solid #ccc; /* Bordure plus visible en mode sombre */
+  }
+
+  .oxygen-badge {
+    background: #003a54; /* Bleu très foncé pour un contraste maximal en mode sombre */
+  }
+
+  .btn-oxygen {
+    background: #003a54; /* Bleu très foncé pour un contraste maximal en mode sombre */
+    border: 2px solid #ffffff; /* Bordure blanche pour améliorer la visibilité en mode sombre */
+  }
+}
+
+/* ===== AMÉLIORATIONS DU CONTRASTE POUR LES UTILISATEURS MALVOYANTS ===== */
+
+@media (prefers-contrast: more) {
+  /* Amélioration du contraste de la section oxygénothérapie pour les utilisateurs malvoyants */
+  .oxygen-therapy-section {
+    background: #ffffff !important; /* Fond blanc pur pour un contraste maximal */
+  }
+
+  .oxygen-therapy-content h3,
+  .oxygen-benefit h4 {
+    color: #00304d; /* Bleu très foncé pour un contraste maximal */
+  }
+
+  .oxygen-therapy-content p,
+  .oxygen-benefit p {
+    color: #000000; /* Noir pur pour un contraste maximal */
+  }
+
+  .oxygen-benefit {
+    background: #ffffff; /* Fond blanc pur pour un contraste maximal */
+    border: 2px solid #000000; /* Bordure noire pour un contraste maximal */
+  }
+
+  .oxygen-benefit-icon {
+    color: #00304d; /* Bleu très foncé pour un contraste maximal */
+  }
+
+  .oxygen-badge {
+    background: #00304d; /* Bleu très foncé pour un contraste maximal */
+    color: #ffffff; /* Blanc pur pour un contraste maximal */
+    border: 2px solid #ffffff; /* Bordure blanche pour un contraste maximal */
+    outline: 1px solid #000000; /* Contour noir pour un contraste maximal */
+  }
+
+  .btn-oxygen {
+    background: #00304d; /* Bleu très foncé pour un contraste maximal */
+    color: #ffffff; /* Blanc pur pour un contraste maximal */
+    border: 2px solid #000000; /* Bordure noire pour un contraste maximal */
+  }
+}

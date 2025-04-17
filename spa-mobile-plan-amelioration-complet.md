@@ -38,7 +38,7 @@
 - [x] **DONE** - Optimiser les formulaires pour la saisie mobile
 - [x] **DONE** - Remplacer les effets de survol par des effets de toucher
 - [x] **DONE** Ajouter un retour haptique pour les interactions importantes
-- [ ] Améliorer les gestes de balayage pour la navigation
+- [ ] Améliorer les gestes de balayage pour la navigation - to test
 
 ### Navigation mobile
 
